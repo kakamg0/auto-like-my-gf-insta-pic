@@ -5,9 +5,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/instagram-app
-      - /instagram-app/node_modules
+      - .:/usr/src/app
     environment:
       INSTAGRAM_ACCESS_TOKEN: ""
       USER_ID_TO_MONITOR: ""
       SLACK_INCOMING_WEBHOOK_URL: ""
+

@@ -1,4 +1,3 @@
-![Image](/instagram.png)
 <h1 align="center"> Auto like my gf Instagram pics </h1>
 
 Bot to automatically like your friends' Instagram posts, and notify you on your Slack channel.
@@ -9,18 +8,20 @@ Bot to automatically like your friends' Instagram posts, and notify you on your 
  - You are in a relationship. Your girlfriend is constantly nagging you for not being the 'first-one' to like her Instagram pics.
 
  How does it work?
-================  
+================
  This script runs Instagram API every 15mins (cronjob) and checks for any new Instagram post for a paticular `user_id`. If a new a post is found it likes the post and sends a notification to your configured Slack channel using Slack Webhooks.
 
 Installation
 ===============
 
- - `git clone https://github.com/gulzar1996/auto-like-my-gf-insta-pic`
+ - `git clone https://github.com/kakamg0/auto-like-my-gf-insta-pic`
  - `npm install`
  - create a `.env` file (you must set `accessToken`, `user_id` (Target user id) from [Instagram Developer API](https://www.instagram.com/developer) and `slack_url` from [Slack Webhooks](https://api.slack.com/incoming-webhooks) ) as shown.
- ![.env file](/env.png)
+ ![.env file](.env)
  This would assure that your keys are secured and index.js file is untouched.
  - `npm start` (run the app)
+
+Go to http://localhost:3000/auth/instagram to authorize the application to access your account.
 
 Like all the recent instagram post (test)
 
@@ -39,7 +40,7 @@ Deploy to Heroku
 
       http://<HEROKU_URL>.herokuapp.com/run
 
-Setting up Cron Job   
+Setting up Cron Job
 ===================
 
  - create an account [cron-job.org](https://cron-job.org/en/)
@@ -53,20 +54,20 @@ Setting up Cron Job
  - `node cron.js &` create a node-cron that sends GET to the app every 15 min
  - `ps` to list background processes
  - `kill <process id>` to stop the node-cron
- 
- 
+
+
 Docker Setup
 ===================
 
  - Docker >= 17.x, docker-compose >= 1.x
  - Specify environment values in docker-compose.yml.
  - Run `docker-compose up`
- 
+
  ## TODO
 - [ ] Twitter Support
 - [ ] Like only pictures of Gf/Bf (face recognition)
 
-  
+
  Thanks
 =================
 
