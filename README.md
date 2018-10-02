@@ -65,8 +65,6 @@ Docker Setup
 
  ## TODO
 - [ ] Twitter Support
-- [ ] Like only pictures of Gf/Bf (face recognition)
-
 
  Thanks
 =================
