@@ -19,7 +19,7 @@ app.get('/auth/instagram/callback', async (req, res) => {
 
 app.get('/run', async (req, res) => {
   try {
-    instagram.likeRecentMedia();
+    await instagram.likeRecentMedia();
     res.json({ ok: true, data: {} });
   } catch (error) {
     res.status(500).json({ ok: false, error });
